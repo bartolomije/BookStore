@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Plavi Horizonti",
+    "author": "Jelena Petrović",
+    "price": 990,
+    "discount": 0,
+    "image": "images/knjiga1.jpg",
+    "description": "Emotivna priča o potrazi za smislom u savremenom svetu."
+  },
+  {
+    "title": "Tihi Grad",
+    "author": "Marko Lukić",
+    "price": 1200,
+    "discount": 10,
+    "image": "images/knjiga2.jpg",
+    "description": "Triler koji otkriva najmračnije tajne jednog naizgled običnog mesta."
+  },
+  {
+    "title": "Nebo iznad nas",
+    "author": "Ivana Bajić",
+    "price": 1100,
+    "discount": 0,
+    "image": "images/knjiga3.jpg",
+    "description": "Inspirativna priča o ljudskoj snazi i ljubavi prema životu."
+  }
+]
