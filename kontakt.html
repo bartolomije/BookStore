@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Kontaktirajte nas</h1>
+    <nav>
+      <a href="index.html">Početna</a>
+      <a href="books.html">Knjige</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Pišite nam</h2>
+      <form action="mailto:kontakt@novaknjiga.rs" method="POST" enctype="text/plain">
+        <label>Ime:<br><input type="text" name="ime" required></label><br><br>
+        <label>Email:<br><input type="email" name="email" required></label><br><br>
+        <label>Poruka:<br><textarea name="poruka" rows="5" required></textarea></label><br><br>
+        <button type="submit">Pošalji</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Nova Knjiga</p>
+  </footer>
+</body>
+</html>

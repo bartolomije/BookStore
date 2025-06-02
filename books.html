@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sve knjige</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .pagination {
+      text-align: center;
+      margin-top: 2em;
+    }
+    .pagination button {
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      padding: 0.5em 1em;
+      margin: 0.2em;
+      cursor: pointer;
+    }
+    .pagination button:hover {
+      background-color: #004999;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Katalog knjiga</h1>
+    <nav>
+      <a href="index.html">Početna</a>
+      <a href="books.html">Knjige</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="book-list" id="book-list"></section>
+    <div class="pagination" id="pagination"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Nova Knjiga</p>
+  </footer>
+
+  <script>
+    const books = Array.from({ length: 60 }, (_, i) => ({
+      title: `Knjiga ${i + 1}`,
+      author: `Autor ${i + 1}`,
+      price: `${900 + (i % 10) * 50} RSD`,
+      image: `images/knjiga${(i % 5) + 1}.jpg`,
+    }));
+
+    const booksPerPage = 25;
+    let currentPage = 1;
+
+    function displayBooks(page) {
+      const list = document.getElementById('book-list');
+      list.innerHTML = '';
+      const start = (page - 1) * booksPerPage;
+      const end = start + booksPerPage;
+      books.slice(start, end).forEach(book => {
+        const div = document.createElement('div');
+        div.className = 'book';
+        div.innerHTML = `
+          <img src="${book.image}" alt="${book.title}">
+          <h3>${book.title}</h3>
+          <p>Autor: ${book.author}</p>
+          <p>Cena: ${book.price}</p>
+          <a href="mailto:kontakt@novaknjiga.rs?subject=Naručujem ${book.title}" class="order-btn">Naruči</a>
+        `;
+        list.appendChild(div);
+      });
+    }
+
+    function setupPagination() {
+      const pag = document.getElementById('pagination');
+      pag.innerHTML = '';
+      const pageCount = Math.ceil(books.length / booksPerPage);
+      for (let i = 1; i <= pageCount; i++) {
+        const btn = document.createElement('button');
+        btn.textContent = i;
+        btn.onclick = () => {
+          currentPage = i;
+          displayBooks(currentPage);
+        };
+        pag.appendChild(btn);
+      }
+    }
+
+    displayBooks(currentPage);
+    setupPagination();
+  </script>
+</body>
+</html>
