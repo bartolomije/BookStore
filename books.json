@@ -23,4 +23,12 @@
     "image": "images/knjiga3.jpg",
     "description": "Inspirativna priča o ljudskoj snazi i ljubavi prema životu."
   }
+  {
+    "title": "Lepota",
+    "author": "Ivan Bajkić",
+    "price": 1100,
+    "discount": 0,
+    "image": "images/knjiga3.jpg",
+    "description": "Inspirativna priča o ljudskoj snazi i ljubavi prema životu."
+  }
 ]
