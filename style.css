@@ -29,6 +29,28 @@ nav a:hover {
   text-align: center;
 }
 
+.editions {
+  padding: 2em;
+  text-align: center;
+}
+
+.edition-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+.edition {
+  width: 150px;
+}
+
+.edition img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
 .order-btn {
   display: inline-block;
   margin-top: 1em;
